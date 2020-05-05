@@ -1,0 +1,84 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 622b7cd3c227ee3a58c17947326d5cdcb79fa2e5a2757356f70b9256dde2f0f7
+
+name:           taut
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/taut#readme>
+homepage:       https://github.com/githubuser/taut#readme
+bug-reports:    https://github.com/githubuser/taut/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/taut
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_taut
+  hs-source-dirs:
+      src
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveAnyClass DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies DerivingVia DuplicateRecordFields EmptyCase FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns NumericUnderscores OverloadedStrings RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving StrictData TupleSections TypeApplications TypeOperators ViewPatterns
+  ghc-options: -Weverything -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-export-lists -Wno-implicit-prelude
+  build-depends:
+      base >=4.7 && <5
+    , lens
+    , optparse-applicative
+    , process
+    , text
+    , time
+    , wreq
+  default-language: Haskell2010
+
+executable taut
+  main-is: Main.hs
+  other-modules:
+      Paths_taut
+  hs-source-dirs:
+      app
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveAnyClass DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies DerivingVia DuplicateRecordFields EmptyCase FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns NumericUnderscores OverloadedStrings RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving StrictData TupleSections TypeApplications TypeOperators ViewPatterns
+  ghc-options: -Weverything -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-export-lists -Wno-implicit-prelude -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , lens
+    , optparse-applicative
+    , process
+    , taut
+    , text
+    , time
+    , wreq
+  default-language: Haskell2010
+
+test-suite taut-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_taut
+  hs-source-dirs:
+      test
+  default-extensions: BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveAnyClass DeriveFoldable DeriveFunctor DeriveGeneric DeriveLift DeriveTraversable DerivingStrategies DerivingVia DuplicateRecordFields EmptyCase FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NamedFieldPuns NumericUnderscores OverloadedStrings RankNTypes RecordWildCards ScopedTypeVariables StandaloneDeriving StrictData TupleSections TypeApplications TypeOperators ViewPatterns
+  ghc-options: -Weverything -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-export-lists -Wno-implicit-prelude -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , lens
+    , optparse-applicative
+    , process
+    , taut
+    , text
+    , time
+    , wreq
+  default-language: Haskell2010
