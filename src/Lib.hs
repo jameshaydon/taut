@@ -85,8 +85,6 @@ getConfig = execParser opts
             <> header "taut - un-Slack"
         )
 
--- my token: "xoxp-2171860538-786977380516-826738133877-a3e664f856b5e184d705350cd8def179"
--- my chan: "DNZ09V5KK"
 slackCmd :: Text -> Text -> Text -> Text -> IO ()
 slackCmd token chan cmd arg = do
   let opts =
@@ -95,7 +93,8 @@ slackCmd token chan cmd arg = do
           & param "channel" .~ [chan]
           & param "command" .~ ["/" <> cmd]
           & param "text" .~ [arg]
-  _ <- getWith opts "https://slack.com/api/chat.command"
+  res <- getWith opts "https://slack.com/api/chat.command"
+  print res
   pure ()
 
 taut :: IO ()
